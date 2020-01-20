@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-@interface AppDelegate ()
+// 自定义实现delegate需要在此处声明
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -48,6 +49,9 @@
     
     [tabbarController setViewControllers:@[viewController, controller2, controller3]];
 
+    // 自定义delegate在当前这个类中执行
+    tabbarController.delegate = self;
+    
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
     
     [self.window makeKeyAndVisible];
@@ -55,6 +59,10 @@
 
     
     return YES;
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    NSLog(@"did select");
 }
 
 #pragma mark - 生命周期
