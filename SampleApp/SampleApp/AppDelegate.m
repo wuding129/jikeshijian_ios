@@ -23,12 +23,12 @@
     ViewController *viewController = [[ViewController alloc] init];
     
 //    UIViewController *controller1 = [[UIViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+
     
-    navigationController.view.backgroundColor = [UIColor redColor];
-    navigationController.tabBarItem.title = @"新闻";
-    navigationController.tabBarItem.image = [UIImage imageNamed: @"home_icon"];
-    navigationController.tabBarItem.selectedImage = [UIImage imageNamed:@"home_icon_active"];
+    viewController.view.backgroundColor = [UIColor redColor];
+    viewController.tabBarItem.title = @"新闻";
+    viewController.tabBarItem.image = [UIImage imageNamed: @"home_icon"];
+    viewController.tabBarItem.selectedImage = [UIImage imageNamed:@"home_icon_active"];
     
     UIViewController *controller2 = [[UIViewController alloc] init];
     controller2.view.backgroundColor = [UIColor yellowColor];
@@ -46,11 +46,12 @@
     controller3.tabBarItem.image = [UIImage imageNamed: @"profile_icon"];
     controller3.tabBarItem.selectedImage = [UIImage imageNamed:@"profile_icon_active"];
     
-    [tabbarController setViewControllers:@[navigationController, controller2, controller3]];
+    [tabbarController setViewControllers:@[viewController, controller2, controller3]];
 
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
     
     [self.window makeKeyAndVisible];
-    self.window.rootViewController = tabbarController;
+    self.window.rootViewController = navigationController;
 
     
     return YES;
