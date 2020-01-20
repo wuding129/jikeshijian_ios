@@ -56,4 +56,21 @@
     return YES;
 }
 
+#pragma mark - 生命周期
+- (void)applicationWillEnterForeground:(UIApplication *)application{
+    NSLog(@"状态** 将要进入前台");
+}
+- (void)applicationDidBecomeActive:(UIApplication *)application{
+    NSLog(@"状态** 已经活跃");
+}
+- (void)applicationWillResignActive:(UIApplication *)application{
+    NSLog(@"状态** 将要进入后台");
+}
+- (void)applicationDidEnterBackground:(UIApplication *)application{
+    NSLog(@"状态** 已经进入后台");
+}
+- (void)applicationWillTerminate:(UIApplication *)application{
+    NSLog(@"状态** 将要退出程序");
+}
+
 @end
