@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "GTVideoViewController.h"
 // 自定义实现delegate需要在此处声明
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
@@ -31,11 +32,7 @@
     viewController.tabBarItem.image = [UIImage imageNamed: @"home_icon"];
     viewController.tabBarItem.selectedImage = [UIImage imageNamed:@"home_icon_active"];
     
-    UIViewController *controller2 = [[UIViewController alloc] init];
-    controller2.view.backgroundColor = [UIColor yellowColor];
-    controller2.tabBarItem.title = @"视频";
-    controller2.tabBarItem.image = [UIImage imageNamed: @"list_icon"];
-    controller2.tabBarItem.selectedImage = [UIImage imageNamed:@"list_icon_active"];
+    GTVideoViewController *videoController = [[GTVideoViewController alloc] init];
     
 //    UIViewController *controller3 = [[UIViewController alloc] init];
 //    controller3.view.backgroundColor = [UIColor greenColor];
@@ -47,7 +44,7 @@
     controller3.tabBarItem.image = [UIImage imageNamed: @"profile_icon"];
     controller3.tabBarItem.selectedImage = [UIImage imageNamed:@"profile_icon_active"];
     
-    [tabbarController setViewControllers:@[viewController, controller2, controller3]];
+    [tabbarController setViewControllers:@[viewController, videoController, controller3]];
 
     // 自定义delegate在当前这个类中执行
     tabbarController.delegate = self;

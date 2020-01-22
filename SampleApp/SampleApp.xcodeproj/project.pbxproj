@@ -13,6 +13,7 @@
 		4159038723D439B0006BC764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4159038623D439B0006BC764 /* Assets.xcassets */; };
 		4159038A23D439B0006BC764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4159038823D439B0006BC764 /* LaunchScreen.storyboard */; };
 		4159038D23D439B0006BC764 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4159038C23D439B0006BC764 /* main.m */; };
+		4191B32023D82A9900085456 /* GTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4191B31F23D82A9900085456 /* GTVideoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		4159038923D439B0006BC764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4159038B23D439B0006BC764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4159038C23D439B0006BC764 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4191B31E23D82A9900085456 /* GTVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoViewController.h; sourceTree = "<group>"; };
+		4191B31F23D82A9900085456 /* GTVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		4159037923D439AC006BC764 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				4191B31E23D82A9900085456 /* GTVideoViewController.h */,
+				4191B31F23D82A9900085456 /* GTVideoViewController.m */,
 				4159037A23D439AC006BC764 /* AppDelegate.h */,
 				4159037B23D439AC006BC764 /* AppDelegate.m */,
 				4159038023D439AC006BC764 /* ViewController.h */,
@@ -144,6 +149,7 @@
 				4159038223D439AC006BC764 /* ViewController.m in Sources */,
 				4159037C23D439AC006BC764 /* AppDelegate.m in Sources */,
 				4159038D23D439B0006BC764 /* main.m in Sources */,
+				4191B32023D82A9900085456 /* GTVideoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
